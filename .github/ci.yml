@@ -9,7 +9,7 @@ jobs:
       - name: checkout code
         uses: actions/checkout@v4
       - name: Build image
-        run: docker build -t jepchumbalinda/cuportfolio .
+        run: docker build -t ${{ secrets.DOCKER_TEST}}/cuportfolio .
       - name: list images
         run: docker images 
       
